@@ -1,19 +1,19 @@
 :root {
   /* Colour */
-  --brand:        #14504f;
-  --brand-dark:   #0d3837;
+  --brand:        #ebfe9e;
+  --brand-dark:   #d3d7d7;
   --brand-light:  #e7f0ef;
   --accent:       #b0543c;
   --accent-dark:  #8f4330;
  
-  --paper:        #fbfaf7;
-  --surface:      #ffffff;
-  --surface-sunk: #f4f2ed;
+  --paper:        #212120;
+  --surface:      #434343;
+  --surface-sunk: #9f9f9f;
   --line:         #ddd8ce;
  
-  --ink:          #22201d;
-  --ink-soft:     #5e5951;
-  --ink-faint:    #8b857b;
+  --ink:          #fffefc;
+  --ink-soft:     #f9d2f8;
+  --ink-faint:    #fcc2dd;
  
   /* Type */
   --font-head: "Source Serif 4", Georgia, serif;
@@ -116,6 +116,30 @@ input, button, textarea, select {
   font: inherit;
   color: inherit;
 }
+
+.animation-box {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(
+        135deg,
+        #9333ea,
+        #06b6d4
+    );
+
+    border-radius: 25px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 35px;
+    font-weight: bold;
+
+    box-shadow: 0 20px 80px #9333ea55;
+}
+
+button:hover {
+    background: #c4b5fd;
+}
  
 :focus-visible {
   outline: 3px solid var(--accent);
@@ -210,8 +234,34 @@ input, button, textarea, select {
     display: grid;
     grid-template-columns: 7fr 5fr;
     gap: var(--space-5);
+    align-items: center;
   }
 }
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-color: var(--ink);
+  padding: 35px;
+
+  border-radius: 25px;
+  font-weight: bold;
+
+  box-shadow: 0 8px 8px var(--surface-sunk);
+  margin: 20px;
+  height: 188px;
+}
+
+
+@media (min-width: 60em) {
+  .review-container {
+    display: block;
+  }
+}
+
 
 .card {
   background: var(--surface);
