@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controls</title>
+  </head>
+  <body>
+    <header>
+      <p><strong>Northfield Surgery Form</strong></p>
+      </nav>
+    </header>
+    <h1>Booking</h1>
+    <form method="post" id="booking-form">
+      <label for="name">Name</label>
+      <input id="name" type="text" , required />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" , required />
+
+      <label for="tel">Telephone</label>
+      <input id="tel" type="tel" pattern="[0-9]{10}" required />
+
+      <label for="dob">Date Of Birth</label>
+      <input id="dob" type="date" max="" />
+
+      <script>
+        document.getElementById("dob").setAttribute("max", new Date().toISOString().split('T')[0])
+      </script>
+
+      <label for="nhs">NHS Number</label>
+      <input id="nhs" type="number" maxlength="10" />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" minlength="10" />
+
+      <fieldset>
+        <legend>What type of appointment?</legend>
+
+        <input type="radio" id="gp" name="appt_type" value="gp" />
+        <label for="gp">fieldsetGP appointment</label>
+
+        <input type="radio" id="nurse" name="appt_type" value="nurse" />
+        <label for="nurse">Nurse clinic</label>
+
+        <input type="radio" id="phone" name="appt_type" value="phone" />
+        <label for="phone">Telephone consultation</label>
+      </fieldset>
+
+      <label for="clinician">Preferred clinician</label>
+      <select id="clinician" name="clinician"
+        <optgroup label="GRRRRR">
+        <option value="">No preference</option>
+        </optgroup>
+        <optgroup label="GPs">
+          <option value="1">Dr Amara Patel</option>
+          <option value="2">Dr Tom Whitfield</option>
+        </optgroup>
+        <optgroup label="Nurses">
+          <option value="5">Sister Jane Okafor</option>
+        </optgroup>
+      </select>
+
+      <fieldset class="fieldset-checkbox" >
+        <legend>Symptoms?</legend>
+
+        <input type="checkbox" id="bad-cough" name="symptoms[]" value="bad-cough" />
+        <label for="bad-cough">Bad cough</label>
+
+        <input type="checkbox" id="chest-pain" name="symptoms[]" value="chest-pain" />
+        <label for="chest-pain">Chest pain</label>
+
+        <input type="checkbox" id="bleeding" name="symptoms[]" value="bleeding" />
+        <label for="bleeding">Bleeding</label>
+
+        <input type="checkbox" id="death" name="symptoms[]" value="death" />
+        <label for="death">Death</label>
+      </fieldset>
+
+      <label for="reason">Reason for appointment</label>
+      <textarea id="reason" name="reason"rows="4"></textarea>
+
+      <label for="consent">Consent to be contancted</label>
+      <input type="checkbox" id="consent" value="consent" name="consent">
+      
+      <input type="hidden" value="web">
+
+      <button type="submit" >SUBMIT</button>
+      <button type="reset" >RESET</button>
+    </form>
+
+    <footer>
+      <p>Northfield Surgery, 14 Northfield Road, Plymouth PL4 0AB</p>
+      <p>Telephone: <a href="tel:01752000000">01752 000000</a></p>
+      <p>
+        This is a fictional practice built as a student project. No real patient
+        data is used.
+      </p>
+    </footer>
+  </body>
+</html>

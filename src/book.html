@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Northfield Surgery | Book an appointment online</title>
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/get_time.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container site-header__inner">
+        <p><strong>Northfield Surgery</strong></p>
+
+        <nav>
+          <ul>
+            <li>
+              <a class="nav__link" href="index.html" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="services.html" aria-current="page"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="clinicians.html" aria-current="page"
+                >Our team</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="book.html" aria-current="page"
+                >Book an appointment</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="register.html" aria-current="page"
+                >Register</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page content goes here -->
+      <h1>Booking</h1>
+
+      <p>book an appointment</p>
+      <form action="booking.php" method="post">
+        <fieldset>
+          <legend>Your name and date of birth</legend>
+          <div class="field">
+            <label class="field_label" for="name">Full Name</label>
+            <input id="name" type="text" required minlength="2"/>
+            <p class="field__error" id="full-name-error"></p>
+          </div>
+          
+          <div class="field">
+            <label class="field_label" for="nhs">NHS Number</label>
+            <span class="field__hint" id="nhs-hint">
+              10 digits, no spaces. It is on any letter from the surgery.
+            </span>
+            <input id="nhs" type="number" maxlength="10" aria-describedby="nhs-hint" required>/>
+            <p class="field__error" id="nhs-number-error"></p>
+          </div>
+          
+          <div class="field">
+            <label for="dob">Date Of Birth</label>
+            <input id="dob" type="date" max="" required/>
+            <p class="field__error" id="dob-date-error"></p>
+          </div>
+          
+
+          <div class="field">
+            <label for="email">Email</label>
+          <input id="email" type="email" , required />
+          <p class="field__error" id="email-error"></p>
+        </div>
+          
+
+          <div class="field">
+          <label for="tel">Telephone</label>
+          <input id="tel" type="tel" pattern="[0-9]{10}" required />
+          <p class="field__error" id="telephone-number-error"></p>
+        </div>
+          
+        </fieldset>
+
+        <fieldset>
+          <legend>Your appointment</legend>
+
+          <div class="field">
+            <fieldset>
+            <legend>What type of appointment?</legend>
+
+            <input type="radio" id="gp" name="appt_type" value="gp" required/>
+            <label for="gp">fieldsetGP appointment</label>
+
+            <input type="radio" id="nurse" name="appt_type" value="nurse" />
+            <label for="nurse">Nurse clinic</label>
+
+            <input type="radio" id="phone" name="appt_type" value="phone" />
+            <label for="phone">Telephone consultation</label>
+          </fieldset>
+          <p class="field__error" id="appointment-type-error"></p>
+          </div>
+          
+          
+          <div class="field">
+          <label for="clinician">Preferred clinician</label>
+          <select id="clinician" name="clinician"
+            <optgroup label="GRRRRR">
+            <option value="">No preference</option>
+            </optgroup>
+            <optgroup label="GPs">
+              <option value="1">Dr Amara Patel</option>
+              <option value="2">Dr Tom Whitfield</option>
+            </optgroup>
+            <optgroup label="Nurses">
+              <option value="5">Sister Jane Okafor</option>
+            </optgroup>
+          </select>
+        <p class="field__error" id="clinician-error"></p>
+        </div>
+       
+
+          <div class="field">
+            <label for="preferred-date">Preferred appointment date</label>
+          <input id="preferred-date" name="preferred-date" type="date" max="" required/>
+          <p class="field__error" id="preferred-date-error"></p>
+        </div>
+          
+
+          <div class="field">
+            <fieldset>
+            
+            <legend>What time for appointment?</legend>
+            
+            <div class slots>
+            <div class="slot">
+              <input type="radio" id="09:00" name="time" value="09:00" required />
+              <label class="slot__label" for="09:00">09:00</label>
+            </div>
+
+            <div class="slot">
+              <input type="radio" id="11:30" name="time" value="11:30" />
+              <label class="slot__label" for="11:30">11:30</label>
+            </div>
+
+            <div class="slot">
+              <input type="radio" id="14:00" name="time" value="14:00" />
+              <label class="slot__label" for="14:00">14:00</label>
+            </div>
+
+            <div class="slot">
+              <input type="radio" id="16:30" name="time" value="16:30" />
+              <label class="slot__label" for="16:30">16:30</label>
+            </div>
+            </div>
+            <p class="field__error" id="preferred-time-error"></p>
+          </fieldset></div>
+          
+
+          <div class="field">
+            <label for="reason">Reason for appointment</label>
+          <textarea id="reason" name="reason"rows="4"></textarea>
+          <p class="field__error" id="reason-error"></p>
+          </div>
+          
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Consent</legend>
+          <div class="field"><label for="confirm">Confirm That details are correct</label>
+          <input type="checkbox" id="confirm" name="confirm" required>
+          <p class="field__error" id="confirm-error"></p>
+          </div>
+          
+
+          <div class="field">
+            <label for="consent">Consent to be contancted by email</label>
+          <input type="checkbox" id="consent" name="consent">
+          <p class="field__error" id="consent-error"></p>
+          </div>
+          
+
+          <div class="field">
+            <label for="interpreter">Needs an interpreter</label>
+          <input type="checkbox" id="interpreter" name="interpreter">
+          <p class="field__error" id="interpreter-error"></p>
+          </div>
+          
+        </fieldset>
+         <button type="submit" class="btn btn--accent">
+          Request appointment
+        </button>
+
+      </form>
+    </main>
+
+    <footer>
+      <p>Northfield Surgery, 14 Northfield Road, Plymouth PL4 0AB</p>
+      <p>Telephone: <a href="tel:01752000000">01752 000000</a></p>
+      <p>
+        This is a fictional practice built as a student project. No real patient
+        data is used.
+      </p>
+    </footer>
+  </body>
+</html>
