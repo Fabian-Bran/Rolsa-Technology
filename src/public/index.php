@@ -11,35 +11,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Northfield Surgery | Book an appointment online</title>
-
-    <script src="assets/js/app.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
-    <script src="assets/js/engine.js" defer></script>
+    <title>Rolsa Technologies | Green Tech</title>
   </head>
   <body>
-    <header>
-      <div class="container site-header__inner">
-        <p><strong>Rolsa Technologies</strong></p>
-
-        <nav>
-          <ul>
-            <li>
-              <a class="nav__link" href="index.html" aria-current="page"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a class="nav__link" href="calculator.html">Calculator</a>
-            </li>
-            <li>
-              <a class="nav__link" href="services.html">Services</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
+    <?php include "../private/includes/header.php"?>
     <main>
       <!-- Page content goes here -->
 
@@ -55,32 +30,23 @@
           <h2>Reviews</h2>
           <dl>
             <dt>Jhon doe</dt>
-            <dd>8:00am to 4:30pm</dd>
+            <dd>Easy to install.</dd>
 
             <dt>Jane doe</dt>
-            <dd>8:00am to 6:30pm</dd>
+            <dd>A piece of cake!</dd>
 
             <dt>Jhane jan</dt>
-            <dd>Closed</dd>
+            <dd>feels good getting energy in an eco-friendly way</dd>
           </dl>
         </div>
       </section>
 
       <section>
         <h2>How to reduce your carbon footprint</h2>
-        <p>These are instructions for how to book.</p>
-        <ol>
-          <li>use</li>
-          <li>our</li>
-          <li>system</li>
-        </ol>
+        <p>These are some helpful tips and tricks and a link to the calculator.</p>
+        
       </section>
     </main>
-
-    <footer>
-      <p>Rosa Technologies</p>
-      <p>Telephone: <a href="tel:01752000000">01752 000000</a></p>
-      <p>2026 ©</p>
-    </footer>
+    <?php include "../private/includes/footer.php"?>
   </body>
 </html>

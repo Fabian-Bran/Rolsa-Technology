@@ -1,10 +1,5 @@
 :root {
   /* Colour */
-  --brand:        #ebfe9e;
-  --brand-dark:   #d3d7d7;
-  --brand-light:  #e7f0ef;
-  --accent:       #b0543c;
-  --accent-dark:  #8f4330;
  
   --paper:        #212120;
   --surface:      #434343;
@@ -12,8 +7,7 @@
   --line:         #ddd8ce;
  
   --ink:          #fffefc;
-  --ink-soft:     #f9d2f8;
-  --ink-faint:    #fcc2dd;
+
  
   /* Type */
   --font-head: "Source Serif 4", Georgia, serif;
@@ -73,8 +67,10 @@ p {
 
 a {
   text-decoration-line: underline;
-  text-decoration-color: var(--brand);
+  text-decoration-color: var(--surface-sunk);
   text-underline-offset: 3px;
+
+  color: var(--ink);
 }
 
 html {
@@ -115,26 +111,6 @@ img, picture, svg {
 input, button, textarea, select {
   font: inherit;
   color: inherit;
-}
-
-.animation-box {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(
-        135deg,
-        #9333ea,
-        #06b6d4
-    );
-
-    border-radius: 25px;
-
-    display: grid;
-    place-items: center;
-
-    font-size: 35px;
-    font-weight: bold;
-
-    box-shadow: 0 20px 80px #9333ea55;
 }
 
 button:hover {
@@ -209,21 +185,21 @@ button:hover {
 }
 
 .nav__link:hover {
-  color: var(--brand);
+  color: var(--surface-sunk);
 }
 
 .nav__link[aria-current="page"] {
   font-weight: bold;
-  color: var(--brand);
+  color: var(--surface-sunk);
 }
 .btn {
-  background-color: var(--brand);
+  background-color: var(--surface-sunk);
   padding: var(--space-1) var(--space-3);
   border-radius: var(--radius);
   color: #ffffff;
 }
 .btn:hover{
-  color: var(--brand-dark);
+  color: var(--surface-sunk-dark);
 }
 .btn--accent{
   background-color: var(--accent);
@@ -312,8 +288,8 @@ footer {
  
 /* The + combinator: the label immediately after a checked input */
 .slot input:checked + .slot__label {
-  background: var(--brand);
-  border-color: var(--brand);
+  background: var(--surface-sunk);
+  border-color: var(--surface-sunk);
   color: white;
   font-weight: 600;
 }

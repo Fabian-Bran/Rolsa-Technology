@@ -1,0 +1,18 @@
+# Ignore local environment/configuration files containing passwords or keys
+config.local.php
+.env
+
+# Ignore temporary uploads or file caches your scripts might generate
+/uploads/*
+/tmp/*
+/cache/*
+!**/placeholder.txt
+
+# Ignore IDE and OS specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+#zip files
+*.zip
