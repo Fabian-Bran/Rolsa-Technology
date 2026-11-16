@@ -110,7 +110,6 @@ img, picture, svg {
  
 input, button, textarea, select {
   font: inherit;
-  color: inherit;
 }
 
 button:hover {
@@ -196,7 +195,7 @@ button:hover {
   background-color: var(--surface-sunk);
   padding: var(--space-1) var(--space-3);
   border-radius: var(--radius);
-  color: #ffffff;
+  color: #000000;
 }
 .btn:hover{
   color: var(--surface-sunk-dark);
