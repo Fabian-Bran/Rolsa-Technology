@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/bootstrap.php';
 
-
 $current = basename($_SERVER['SCRIPT_NAME'] ?? '');
 $links = [
     'index.php'      => 'Home',
