@@ -26,11 +26,11 @@ $links = [
       <div class="nav__account">
         <?php if (is_logged_in()): ?>
           <a class="nav__link" href="user.php"<?= $current === 'user.php' ? ' aria-current="page"' : '' ?>>
-            <?=e($_SESSION['first_name'] ?? 'Account') ?>
+            <?= e($_SESSION['first_name'] ?? 'Account') ?>
           </a>
           <form action="logout.php" method="post" class="inline-form">
             <?= csrf_field() ?>
-            <button type="submit" class="btn">Log out</button>
+            <button type="submit" class="btn btn--ghost btn--sm">Log out</button>
           </form>
         <?php else: ?>
           <a class="nav__link" href="login.php"<?= $current === 'login.php' ? ' aria-current="page"' : '' ?>>Log in</a>

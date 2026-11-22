@@ -1,11 +1,6 @@
 <?php
-session_start();
-
-if (
-    !isset($_SESSION['logged']) ||
-    $_SESSION['logged'] !== true
-) {
-    header("Location: index.php");
-    exit();
-}
+// Include at the top of any page that needs a signed-in user.
+require_once __DIR__ . '/bootstrap.php';
+no_cache();
+require_login();
 ?>

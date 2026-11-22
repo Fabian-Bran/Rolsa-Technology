@@ -56,3 +56,14 @@ CREATE TABLE jobs (
 
     FOREIGN KEY (quote_id) REFERENCES quotes(id)
 );
+
+CREATE TABLE auth_attempts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    action VARCHAR(50) NOT NULL,
+    identifier VARCHAR(255) NOT NULL,
+    ip VARCHAR(45) NOT NULL,
+    attempted_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    INDEX idx_auth_action_ip_time (action, ip, attempted_at),
+    INDEX idx_auth_identifier_time (identifier, attempted_at)
+);

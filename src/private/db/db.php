@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+/**
+ * Lazy PDO connection. Credentials are NOT stored in this file.
+ * Priority: environment variables, then src/private/config.local.php
+ * (git-ignored). See config.local.example.php.
+ */
 function db(): PDO
 {
     static $pdo = null;
